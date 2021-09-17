@@ -195,5 +195,6 @@ body {
 
 .btn-animated {
     animation: moveInBottom .5s ease-out 0.75s;
+    /* Applies the styles of the 0% before animatin starts */
     animation-fill-mode: backwards;
 }
