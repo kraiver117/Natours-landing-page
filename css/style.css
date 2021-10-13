@@ -1,3 +1,31 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -10,39 +38,15 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+body {
   /* Is a good practice to specify font on body */
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  position: relative;
-  /* Adding gradient to a background image*/
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  /* Cover: use image in all the container contain: use the width of image but no fill all the container */
-  background-size: cover;
-  /* When a resize is applied the img should must on bg position */
-  background-position: top;
-  /* Only shows the part that polygon covers */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    /* Transform move the element */
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  padding: 3rem; }
 
 .heading-primary {
   color: #fff;
@@ -71,35 +75,6 @@ body {
     letter-spacing: 1.75rem;
     /* shorthand property */
     animation: moveInRight 1s ease-out; }
-
-/* Animations */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(4rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
 
 .btn {
   /* When we click an element, pseudoclass:active is active */ }
@@ -141,3 +116,28 @@ body {
     animation: moveInBottom .5s ease-out 0.75s;
     /* Applies the styles of the 0% before animation starts */
     animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  position: relative;
+  /* Adding gradient to a background image*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  /* Cover: use image in all the container contain: use the width of image but no fill all the container */
+  background-size: cover;
+  /* When a resize is applied the img should must on bg position */
+  background-position: top;
+  /* Only shows the part that polygon covers */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* Transform move the element */
+    transform: translate(-50%, -50%);
+    text-align: center; }
