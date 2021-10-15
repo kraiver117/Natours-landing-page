@@ -12,6 +12,7 @@
     /* When a resize is applied the img should must on bg position */
     background-position: top;
     /* Only shows the part that polygon covers */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logo-box {
